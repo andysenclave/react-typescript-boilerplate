@@ -1,26 +1,13 @@
 /* eslint import/export: 0 */
 
-declare module '*.svg' {
-  const content: React.FunctionComponent<React.SVGAttributes<HTMLOrSVGElement>>;
-  export default content;
-}
+declare module '*.svg';
 
-declare module '*.png' {
-  const content: any;
-  export default content;
-}
+declare module '*.png';
 
-declare module '*.json' {
-  const content: any;
-  export default content;
-}
+declare module '*.json';
 
-declare module 'react-sizes' {
-  const content: any;
-  export default content;
-}
+declare module '*.jpg';
 
-declare module 'lottie-web' {
-  const content: any;
-  export default content;
-}
+declare module '*.jpeg';
+
+declare module '*.gif';

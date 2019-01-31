@@ -30,13 +30,37 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|gif|json)$/,
+        test: /\.(png|jpg|jpeg|svg|gif)$/i,
         use: [
           {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'images/[name].[ext]'
+              name: "assets/images/[hash].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff|eot|ttf)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: "assets/fonts/[hash].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(json)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: "assets/data/[hash].[ext]"
             }
           }
         ]

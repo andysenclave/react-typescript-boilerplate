@@ -1,19 +1,19 @@
-import * as React from 'react';
+import React from 'react';
 
-import Woody from '../assets/images/woody.png';
+import * as woody from '../assets/images/woody.png';
 
-interface HelloProps { 
+interface HelloProps {
   compiler: string;
-  framework: string; 
+  framework: string;
 }
 
-const Hello = (props: HelloProps) => {
-  return (
-    <div className='App'>
-      <img src="Woody" alt="woody image"/>
-      <h1>Hello from {props.compiler} and {props.framework}!</h1>
-    </div>
-  );
-}
+const Hello = ({ compiler, framework }: HelloProps) => (
+  <div className="App">
+    <img src={woody} alt="woody image" />
+    <h1>
+      Hello from {compiler} and {framework}!
+    </h1>
+  </div>
+);
 
 export default Hello;
